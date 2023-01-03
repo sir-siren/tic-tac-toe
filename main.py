@@ -6,7 +6,6 @@ nop = input("Enter the Player Name: ").title()
 #create the board as a list of strings
 board = [" " for i in range(9)]
 
-
 #create a function to print the current board state
 def print_board():
     # Print the current board state
@@ -42,7 +41,6 @@ def is_victory(icon):
     else:
         return False
 
-
 #create a function to check if the game is lost
 def is_fail(icon):
     #check rows
@@ -62,14 +60,12 @@ def is_fail(icon):
     else:
         return False
 
-
 #create a function to check if the board is full
 def is_draw():
     if " " not in board:
         return True
     else:
         return False
-
 
 #create a function for the player's turn
 def player_turn(icon):
@@ -88,7 +84,6 @@ def player_turn(icon):
         else:
             print("That space is taken. Try again.")
 
-
 #create a function for the computer's turn
 def computer_turn(icon):
     print("Computer is thinking...")
@@ -102,11 +97,9 @@ def computer_turn(icon):
     choice = random.choice(available_spaces)
     board[choice] = icon
 
-
 def clear_board():
     global board  # make sure to reference the global board variable
     board = [" " for i in range(9)]
-
 
 def restart():
     retry = int(input("Type 1 to Restart and 0 to Quit: "))
@@ -119,7 +112,6 @@ def restart():
     else:
         print("Worng Input! Please try again!")
         restart()
-
 
 #create the main game loop
 def game():
@@ -141,6 +133,5 @@ def game():
         elif is_fail("O"):
             print(f"Computer You Lose! {nop} Wins!")
             restart()
-
 
 game()
