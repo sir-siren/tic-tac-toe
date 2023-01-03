@@ -24,7 +24,7 @@ To play the game, you will need to have Python installed on your computer. If yo
 2. Look for opportunities to create two in a row for yourself, as this will give you a good chance to win on the next turn.
 3. Pay attention to the spaces the computer has chosen, as this can give you clues about its strategy.
 # Example:
-```
+```py
 Enter the Player Name: adam
 
 -----------
