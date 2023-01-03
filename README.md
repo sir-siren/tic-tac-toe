@@ -23,6 +23,9 @@ To play the game, you will need to have Python installed on your computer. If yo
 1. Try to block the computer from getting three in a row.
 2. Look for opportunities to create two in a row for yourself, as this will give you a good chance to win on the next turn.
 3. Pay attention to the spaces the computer has chosen, as this can give you clues about its strategy.
+
+![HANG-MAN](https://cdn.discordapp.com/attachments/966283152643465226/1059945602236027011/HANG-MAN.png)
+
 # Example:
 ```py
 Enter the Player Name: adam
