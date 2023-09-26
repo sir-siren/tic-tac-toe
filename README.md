@@ -7,7 +7,7 @@ Tic-Tac-Toe is a simple game that is easy to learn, yet it can be highly addicti
 
 To play the game, you will need to have Python installed on your computer. If you do not have Python installed, you can download it from the official Python website: [Python](https://www.python.org/).
 
-![tic-tac-toe](https://cdn.discordapp.com/attachments/1096839305751699527/1126790674667274311/xo.gif)
+![tic-tac-toe](./assets/xo.gif)
 
 ## How to Play:
 1. Open a terminal or command prompt and navigate to the directory where you have saved the tic-tac-toe game file.
