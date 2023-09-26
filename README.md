@@ -11,7 +11,7 @@ To play the game, you will need to have Python installed on your computer. If yo
 
 ## How to Play:
 1. Open a terminal or command prompt and navigate to the directory where you have saved the tic-tac-toe game file.
-2. Run the game using the command ```python tic-tac-toe.py```
+2. Run the game using the command ```python main.py```
 3. The game board is a 3x3 grid, with nine spaces in total. The goal of the game is to get three of your icons in a row (horizontally, vertically, or diagonally) before the computer does.
 4. At the start of each turn, you will be prompted to choose a space to place your icon. Simply enter the number of the space you want to place your icon in (1-9) and press Enter. The computer will then take its turn.
 5. The game will continue until one of the players wins or the game is a draw. If you win, the game will end and you will be declared the winner. If the game is a draw, the game will end and it will be declared a tie.
