@@ -1,4 +1,4 @@
-# Tic-Tac-Toe
+*# Tic-Tac-Toe
 Tic-Tac-Toe is a game that has been enjoyed by people of all ages for many years. It is a classic two-player game in which each player takes turns placing their icons ```(either an "X" or an "O")``` on a 3x3 grid. The goal of the game is to get three of your icons in a row (horizontally, vertically, or diagonally) before your opponent does.
 
 In this version of Tic-Tac-Toe, you have the option to play against the computer. To play, simply choose a space on the board to place your icon. The computer will then take its turn, placing its own icon on the board. The game will continue in this manner until one of the players wins or the game is a draw.
@@ -31,22 +31,22 @@ To play the game, you will need to have Python installed on your computer. If yo
 # Example:
 ```py
 
-.___________. __    ______        .___________.    ___       ______        .___________.  ______    _______ 
+.___________. __    ______        .___________.    ___       ______        .___________.  ______    _______
 |           ||  |  /      |       |           |   /   \     /      |       |           | /  __  \  |   ____|
-`---|  |----`|  | |  ,----' ______`---|  |----`  /  ^  \   |  ,----' ______`---|  |----`|  |  |  | |  |__   
-    |  |     |  | |  |     |______|   |  |      /  /_\  \  |  |     |______|   |  |     |  |  |  | |   __|  
-    |  |     |  | |  `----.           |  |     /  _____  \ |  `----.           |  |     |  `--'  | |  |____ 
+`---|  |----`|  | |  ,----' ______`---|  |----`  /  ^  \   |  ,----' ______`---|  |----`|  |  |  | |  |__
+    |  |     |  | |  |     |______|   |  |      /  /_\  \  |  |     |______|   |  |     |  |  |  | |   __|
+    |  |     |  | |  `----.           |  |     /  _____  \ |  `----.           |  |     |  `--'  | |  |____
     |__|     |__|  \______|           |__|    /__/     \__\ \______|           |__|      \______/  |_______|
-                                                                                                            
+
 
 Enter the Player Name: adam
 
 -----------
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 -----------
 
 Your turn, Adam. Which space do you want to place your icon?
@@ -54,11 +54,11 @@ Enter a number (1-9): 1
 Computer is thinking...
 
 -----------
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 -----------
- X | O |   
+ X | O |
 -----------
 
 Your turn, Adam. Which space do you want to place your icon?
@@ -68,22 +68,22 @@ Enter a number (1-9): 5
 Computer is thinking...
 
 -----------
-   |   |   
+   |   |
 -----------
-   | X |   
+   | X |
 -----------
- X | O | O 
+ X | O | O
 -----------
 
 Your turn, Adam. Which space do you want to place your icon?
 Enter a number (1-9): 9
 
 -----------
-   |   | X 
+   |   | X
 -----------
-   | X |   
+   | X |
 -----------
- X | O | O 
+ X | O | O
 -----------
 
 Adam Win! Computer Loses

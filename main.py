@@ -2,23 +2,23 @@ import random
 import sys
 import time as tm
 
-
-print('''
-.___________. __    ______        .___________.    ___       ______        .___________.  ______    _______ 
+print(r'''
+.___________. __    ______        .___________.    ___       ______        .___________.  ______    _______
 |           ||  |  /      |       |           |   /   \     /      |       |           | /  __  \  |   ____|
-`---|  |----`|  | |  ,----' ______`---|  |----`  /  ^  \   |  ,----' ______`---|  |----`|  |  |  | |  |__   
-    |  |     |  | |  |     |______|   |  |      /  /_\  \  |  |     |______|   |  |     |  |  |  | |   __|  
-    |  |     |  | |  `----.           |  |     /  _____  \ |  `----.           |  |     |  `--'  | |  |____ 
+`---|  |----`|  | |  ,----' ______`---|  |----`  /  ^  \   |  ,----' ______`---|  |----`|  |  |  | |  |__
+    |  |     |  | |  |     |______|   |  |      /  /_\  \  |  |     |______|   |  |     |  |  |  | |   __|
+    |  |     |  | |  `----.           |  |     /  _____  \ |  `----.           |  |     |  `--'  | |  |____
     |__|     |__|  \______|           |__|    /__/     \__\ \______|           |__|      \______/  |_______|
-                                                                                                            
+
 ''')
 nop = input("Enter the Player Name: ").title()
 #create the board as a list of strings
 board = [" " for i in range(9)]
 
-#create a function to print the current board state
 def print_board():
-    # Print the current board state
+    """
+    Print the current board state.
+    """
     row1 = " {} | {} | {} ".format(board[6], board[7], board[8])
     row2 = " {} | {} | {} ".format(board[3], board[4], board[5])
     row3 = " {} | {} | {} ".format(board[0], board[1], board[2])
@@ -32,8 +32,16 @@ def print_board():
     print("-"*11)
     print()
 
-#create a function to check if the game is won
 def is_victory(icon):
+    """
+    Check if the game is won by the given icon.
+
+    Parameters:
+    icon (str): The icon to check for victory.
+
+    Returns:
+    bool: True if the game is won, False otherwise.
+    """
     #check rows
     if (board[0] == icon and board[1] == icon and board[2] == icon) or \
        (board[3] == icon and board[4] == icon and board[5] == icon) or \
@@ -51,8 +59,16 @@ def is_victory(icon):
     else:
         return False
 
-#create a function to check if the game is lost
 def is_fail(icon):
+    """
+    Check if the game is lost by the given icon.
+
+    Parameters:
+    icon (str): The icon to check for loss.
+
+    Returns:
+    bool: True if the game is lost, False otherwise.
+    """
     #check rows
     if (board[0] == icon and board[1] == icon and board[2] == icon) or \
        (board[3] == icon and board[4] == icon and board[5] == icon) or \
@@ -70,48 +86,65 @@ def is_fail(icon):
     else:
         return False
 
-#create a function to check if the board is full
 def is_draw():
+    """
+    Check if the game is a draw.
+
+    Returns:
+    bool: True if the game is a draw, False otherwise.
+    """
     if " " not in board:
         return True
     else:
         return False
 
-#create a function for the player's turn
 def player_turn(icon):
+    """
+    Perform the player's turn.
+
+    Parameters:
+    icon (str): The icon of the player.
+    """
     print(f"Your turn, {nop}. Which space do you want to place your icon?")
     while True:
-        #ask for player input
         try:
             choice = int(input("Enter a number (1-9): "))
         except ValueError:
             print("That's not a valid option. Try again.")
             continue
-        #check if the space is available
         if board[choice - 1] == " ":
             board[choice - 1] = icon
             break
         else:
             print("That space is taken. Try again.")
 
-#create a function for the computer's turn
 def computer_turn(icon):
+    """
+    Perform the computer's turn.
+
+    Parameters:
+    icon (str): The icon of the computer.
+    """
     print("Computer is thinking...")
     tm.sleep(1)
-    #create a list of available spaces
     available_spaces = []
     for i, space in enumerate(board):
         if space == " ":
             available_spaces.append(i)
-        #randomly choose a space from the available spaces
     choice = random.choice(available_spaces)
     board[choice] = icon
 
 def clear_board():
-    global board  # make sure to reference the global board variable
+    """
+    Clear the board by resetting all spaces to empty.
+    """
+    global board
     board = [" " for i in range(9)]
 
 def restart():
+    """
+    Restart the game or quit based on user input.
+    """
     retry = int(input("Type 1 to Restart and 0 to Quit: "))
     if retry == 1:
         clear_board()
@@ -123,8 +156,10 @@ def restart():
         print("Worng Input! Please try again!")
         restart()
 
-#create the main game loop
 def game():
+    """
+    The main game loop.
+    """
     while True:
         print_board()
         player_turn("X")
